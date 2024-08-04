@@ -25,7 +25,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR , 'template')
 SECRET_KEY = "django-insecure-i2=8x3_51vz268w5lsp(3i8jpal4m6q5&&9krx00lkd0wev!^#"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -117,12 +117,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
-import os
 
 STATIC_URL = "static/"
 STATIC_DIR= os.path.join(BASE_DIR,'static')
 
 STATICFILES_DIRS =[STATIC_DIR]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
