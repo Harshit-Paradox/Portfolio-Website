@@ -25,7 +25,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR , 'template')
 SECRET_KEY = "django-insecure-i2=8x3_51vz268w5lsp(3i8jpal4m6q5&&9krx00lkd0wev!^#"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -50,6 +50,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "portfolio.urls"
@@ -118,12 +119,31 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
-STATIC_DIR= os.path.join(BASE_DIR,'static')
+# STATIC_URL = "/static/"
+# STATIC_DIR= os.path.join(BASE_DIR,'static')
 
-STATICFILES_DIRS =[STATIC_DIR]
+# STATICFILES_DIRS =[STATIC_DIR]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# import os
+# from pathlib import Path
+
+# BASE_DIR = Path(__file__).resolve().parent.parent
+
+# URL to use when referring to static files
+STATIC_URL = '/static/'
+
+# The absolute path to the directory where collectstatic will collect static files for deployment
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Additional directories which contain static files
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
 
 
 # Default primary key field type
