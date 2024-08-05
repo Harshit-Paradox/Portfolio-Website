@@ -17,6 +17,8 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = os.path.join(BASE_DIR , 'template')
 
+PORT = 8000
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -25,7 +27,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR , 'template')
 SECRET_KEY = "django-insecure-i2=8x3_51vz268w5lsp(3i8jpal4m6q5&&9krx00lkd0wev!^#"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
