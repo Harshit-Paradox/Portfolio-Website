@@ -644,7 +644,7 @@ nav .fa-solid{
     .about{
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 5rem;
     }
     .about-content{
         height: 100%;
@@ -708,7 +708,7 @@ nav .fa-solid{
     }
     .contact-left{
         width: 100%;
-        margin-left: 40px;
+        /* margin-left: 40px; */
         order: 2;
     }
     .contact-left h1{
