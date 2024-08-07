@@ -16,11 +16,15 @@
         <a href="#" class="logo">Portfolio</a>
 
         <nav class="navbar">
+            <ul id="sidemenu">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Get in touch</a>
+            <i class="fa-solid fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
 
 
         </nav>
@@ -46,16 +50,25 @@
         </div>
 
     </section>
+
+
+
+    <div class="about-head">
+        <h2 class="heading">About <span>Me</span></h2>
+    </div>
+
     <section class="about" id="about">
+        
+        <div class="about-img">
+            <!-- <h2 class="heading">About <span>Me</span></h2> -->
+            <img src="/static/img/Snapchat-16890196352 copy.jpg" alt="">
+
+        </div>
         <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
+            <!-- <h2 class="heading">About <span>Me</span></h2> -->
             <p>Hello! I’m Harshit Agarwal, a passionate backend developer with a strong foundation in Python and Django. My journey in technology has been marked by a commitment to developing efficient, scalable solutions that drive innovation and meet real-world needs.</p>
                <p>Beyond my backend expertise, I have honed my skills in Salesforce, enabling me to integrate and enhance customer relationship management systems effectively. This blend of backend development and Salesforce proficiency allows me to deliver comprehensive solutions that optimize both operational workflows and customer. </p>
             <a href="#" class="download-button">Read More</a>
-
-        </div>
-        <div class="about-img">
-            <img src="/static/img/Snapchat-16890196352 copy.jpg" alt="">
 
         </div>
     </section>
@@ -274,6 +287,17 @@
             strings: ['Web Developer', 'Video Editor' ,'Salesforce Developer'],
             typeSpeed: 50,
         });
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
     </script>
 
 

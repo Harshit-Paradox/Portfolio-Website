@@ -146,7 +146,7 @@ section{
     justify-content: center;
     align-items: center;
     gap: 10rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     color: white;
 }
 .heading {
@@ -154,12 +154,14 @@ section{
     font-size: 8rem;
 }
 
-.about-content h2 {
+.about-head h2 {
     font-size: 50px;
-    text-align: left;
+    text-align: center;
     line-height: 1.5;
+    background-color: var(--bg-color);
+    margin-top: 50px;
 }
-.about h2 span{
+.about-head h2 span{
     color: var(--main-color);
     text-shadow: 0 0 50px var(--main-color);
 }
@@ -176,7 +178,7 @@ section{
     transition: 0.4s ease-in-out;
 }
 .about-content p {
-    font-size: 20px;
+    font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
 
@@ -431,9 +433,10 @@ section{
 
 
 .projects{
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
 }
 .projects-content h2{
+    /* margin-top: 30px; */
     font-size: 50px;
     text-align: center;
     color: var(--main-color);
@@ -500,7 +503,7 @@ section{
     height: 100%;
 }
 .projects-content a{
-    margin-top: 75px;
+    /* margin-top: 75px; */
     width: fit-content;
     display: block;
     margin: 50px auto;
@@ -598,4 +601,120 @@ form .download-button{
     border-radius: 10px;
     padding: 0 40px;
     
+}
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width : 600px){
+
+    .home{
+        background-color: var(--bg-color);
+        background-image: url("/static/img/Snapchat-16890196352\ copy.jpg;")
+
+    }
+    .navbar .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    .navbar ul{
+        background: #31f74f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh; 
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    .navbar ul a{
+        display: block;
+        margin: 25px;
+        color: #000;
+    }
+    .navbar ul .fa-solid{
+        position: absolute;
+        color: #000;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .about{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .about-content{
+        height: 100%;
+    }
+    .about-content p{
+        font-size: 1.3rem;
+        margin: 0rem 0 4rem;
+    }
+    .about-img img{
+        top: 2rem;
+    }
+
+    section{
+        min-height: 100vh;
+        padding: 1rem 9% 1rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #skills{
+        height: 100%;
+        width: 100%;
+        /* background-color: #31f74f; */
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0rem 9% 0rem
+    }
+    .container1{
+        padding: 40px 10px;
+        margin-top: 60px;
+    }
+    .contact-row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .contact-right{
+        width: 100%;
+        flex-basis: 100%;
+        order: 1;
+    }
+    
+    form .download-button{
+        padding: 10px 40px;
+        /* margin-left: 100px; */
+    }
+    .contact-left{
+        width: 100%;
+        margin-left: 40px;
+        order: 2;
+    }
+    .contact-left h1{
+        margin-top: 40px;
+        font-size: 50px;
+        color: #31f74f;
+    }
+
 }
